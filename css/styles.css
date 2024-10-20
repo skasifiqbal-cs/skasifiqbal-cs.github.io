@@ -405,24 +405,86 @@ body.terminal-dark .highlight {
   margin-bottom: 5px; /* Space between the title and the description */
 }
 
+/* Hide the sidebar by default on small screens */
 @media (max-width: 768px) {
-  .content-container {
-    flex-direction: column;
-    padding: 10px;
+  .ascii-art {
+    display: none;
   }
 
-  .sidebar {
+    .sidebar {
+      position: fixed;
+      left: -230px; /* Hide the sidebar initially */
+      top: 0;
+      width: 230px;
+      height: 100%;
+      background: #e8ebf2;
+      box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+      transition: left 0.3s ease-in-out;
+      z-index: 10;
+    }
+    
+    .sidebar.open {
+      left: 0; /* Slide in the sidebar */
+    }
+  .menu-button {
+    position: fixed;
+    left: 0; /* Start at the edge of the hidden sidebar */
+    top: 10px;
+    background: #5A8D98;
+    color: #ffffff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    z-index: 20;
+    transition: left 0.3s ease-in-out;
+  }
+
+  /* Adjust button position when the sidebar is open */
+.sidebar.open + .menu-button {
+  left: 230px; /* Moves the button to where the sidebar ends */
+}
+
+  .sidebar .profile-picture {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 10px;
+    border-radius: none;
+  }
+
+  .nav-and-connect {
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 100%;
-    padding: 10px;
+    gap: 10px;
   }
 
-  .profile-picture {
-    width: 50px;
-    height: auto;
+  .nav-list,
+  .social-section {
+    flex: 1;
   }
 }
+
+
+/* Show the sidebar normally on larger screens */
+@media (min-width: 769px) {
+  .menu-button {
+    display: none;
+  }
+  .sidebar {
+    display: block; /* Always show sidebar on larger screens */
+    position: relative;
+    width: 230px;
+  }
+
+  .sidebar .profile-picture {
+    width: 100%;
+  }
+
+  .nav-and-connect {
+    flex-direction: column;
+  }
+}
+
 
 html {
   scroll-behavior: smooth;

@@ -60,3 +60,8 @@ function updateToggleButtonText(theme) {
     console.log('Updated button text to:', button.innerHTML);
   }
 }
+
+function toggleSidebar() {
+  const sidebar = document.querySelector('.sidebar');
+  sidebar.classList.toggle('open');
+}
