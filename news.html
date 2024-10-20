@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sk Asif Iqbal</title>
+  <link rel="icon" type="image/png" href="images/favicon.png">
+   
+  <style>
+    /* Prevent flash of wrong theme */
+    html {
+      background-color: #f4f7fa; /* Default to light background */
+    }
+    html.terminal-dark {
+      background-color: #1e2127;
+    }
+  </style>
+
+  <script>
+    // This script runs before any CSS is applied, ensuring the correct theme is set immediately.
+    (function() {
+      const preferredTheme = localStorage.getItem('theme') || 'terminal-light';
+      document.documentElement.className = preferredTheme;
+      
+      // If the theme is dark, adjust the background color to match
+      if (preferredTheme === 'terminal-dark') {
+        document.documentElement.style.backgroundColor = '#1e2127';
+      }
+    })();
+    </script>
+
+    <link rel="stylesheet" href="css/terminal.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="content-container">
+    <aside class="sidebar">
+      <div class="typing-name">
+        <span class="static-name"> > Sk Asif Iqbal</span><sppan class="cursor">|</span>
+      </div>
+      <!-- <img src="images/profile.jpg" alt="Profile Picture" class="profile-picture"> -->
+      <nav>
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">' About</a></li>
+          <li><a href="publications.html" class="nav-link"># Publications</a></li>
+          <li><a href="news.html" class="nav-link">! News</a></li>
+          <li><a href="miscellaneous.html" class="nav-link">&infintie; Miscellaneous</a></li>
+          <li><a href="cv.pdf" class="nav-link" target="_blank">* CV</a></li>
+
+        </ul>
+      </nav>
+      <div class="social-section">
+        <div class="terminal-alert">
+          <p class="connect-title">[ Connect ]</p>
+          <ul class="social-links">
+            <li><a href="mailto:skasifiqbbal31@gmail.com" class="social-link">skasifiqbbal31@gmail.com</a></li>
+              <li><a href="https://github.com/skasifiqbal-cs" class="social-link" target="_blank">GitHub</a></li>
+              <li><a href="https://www.linkedin.com/in/sk-asif-i-10a913118/" class="social-link" target="_blank">LinkedIn</a></li>
+              <li><a href="https://x.com/SkAsifIqbal19" class="social-link" target="_blank">Twitter</a></li>
+              <!-- <li><a href="https://scholar.google.com/citations?user=yourid" class="social-link">Google Scholar</a></li> -->
+          </ul>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <div class="toggle-container">
+        <button id="theme-toggle-button" class="theme-toggle">(o) Dark Mode</button>
+      </div>
+      <section id="news" class="terminal-window">
+        <h3 class="section-title">[ News ]</h3>
+        <div class="simple-content">
+        <ul class="publications-list">
+          <li>
+            [Dec, '24] Attending the <a href="#" class="publication-link">IndoML Symposium</a> at BITS Goa.
+          </li>
+          <li>
+            [Aug, '24] Attended the <a href="#" class="publication-link">SAT+SMT Workshop</a> at TCS Pune. Presented work on the Explanation of unsolvability in hybrid systems.
+          </li>
+          <li>
+            [Jun, '24] Attended the <a href="#" class="publication-link">Recent Trends in Algorithms Workshop(RTA)</a>at IACS Kolkata.
+          </li>
+        </ul>
+        </div>
+        <div class="profile-separator">- - - - - - - - - - - - - - - -</div>
+      </section>
+
+      <section id="awards" class="terminal-window">
+        <h3 class="section-title">[ Awards/Fellowships ]</h3>
+        <div class="simple-content">
+        <ul class="publications-list">
+          <!-- <li>TCS Research Grant for Masters' Thesis.</li> -->
+          <!-- <li>Institute Fellowship for Postgraduate Studies at Chennai Mathematical Institute.</li> -->
+        </ul>
+        </div>
+        <div class="profile-separator">- - - - - - - - - - - - - - - -</div>
+      </section>
+
+      <section id="experience" class="terminal-window">
+        <h3 class="section-title">[ Experience ]</h3>
+        <div class="simple-content">
+        <ul class="publications-list">
+          <!-- <li>Teaching Assistant for courses Data Mining and Machine Learning, Model Checking and Software Verification, both at CMI.</li> -->
+        </ul>
+        </div>
+        <div class="profile-separator">- - - - - - - - - - - - - - - -</div>
+      </section>
+    </main>
+  </div>
+
+  <script src="js/scripts.js"></script>
+</body>
+</html>

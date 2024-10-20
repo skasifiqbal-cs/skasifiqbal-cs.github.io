@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sk Asif Iqbal</title>
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+  <style>
+    /* Prevent flash of wrong theme */
+    html {
+      background-color: #f4f7fa; /* Default to light background */
+    }
+    html.terminal-dark {
+      background-color: #1e2127;
+    }
+  </style>
+
+  <script>
+    // Ensure the preferred theme is applied immediately.
+    (function() {
+      const preferredTheme = localStorage.getItem('theme') || 'terminal-light';
+      document.documentElement.className = preferredTheme;
+
+      // Match the background to avoid flickering.
+      if (preferredTheme === 'terminal-dark') {
+        document.documentElement.style.backgroundColor = '#1e2127';
+      }
+    })();
+  </script>
+
+  <link rel="stylesheet" href="css/terminal.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="content-container">
+    <aside class="sidebar">
+      <div class="typing-name">
+        <span class="typed-text">> Sk Asif Iqbal</span><span class="cursor">|</span>
+      </div>
+      <nav>
+        <img src="images/profile.jpg" alt="Profile Picture" class="profile-picture" loading="lazy">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">' About</a></li>
+          <li><a href="publications.html" class="nav-link"># Publications</a></li>
+          <li><a href="news.html" class="nav-link">! News</a></li>
+          <li><a href="miscellaneous.html" class="nav-link">&infintie; Miscellaneous</a></li>
+          <li><a href="cv.pdf" class="nav-link" target="_blank">* CV</a></li>
+        </ul>
+      </nav>
+      <div class="social-section">
+        <div class="terminal-alert">
+          <p class="connect-title">[ Connect ]</p>
+          <ul class="social-links">
+            <li><a href="mailto:skasifiqbbal31@gmail.com" class="social-link">skasifiqbbal31@gmail.com</a></li>
+            <li><a href="https://github.com/skasifiqbal-cs" class="social-link" target="_blank">GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/sk-asif-i-10a913118/" class="social-link" target="_blank">LinkedIn</a></li>
+            <li><a href="https://x.com/SkAsifIqbal19" class="social-link" target="_blank">Twitter</a></li>
+          </ul>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <div class="toggle-container">
+        <button id="theme-toggle-button" class="theme-toggle">(o) Dark Mode</button>
+      </div>
+      <pre class="ascii-art">
+--> (q0) —0—> (q1) —1—> ((q2))         ∀x ∈ X, ∃y ∈ Y: f(x) = y
+      |                   ↑                 => Satisfiability
+      |___________________|          q0     ⊢ Formal Verification
+                2                    / \
+                                  q1     q2     Cyber-physical
+        Automata | Planning      / \     / \    Systems
+                               q3   q4  q5  q6</pre>
+
+      <section id="about" class="terminal-window">
+        <h3 class="section-title">[ About ]</h3>
+        <div class="simple-content">
+          <p>Hello, I’m <strong>Asif</strong>, a final-year integrated Bachelor's-Master's student in Computer Science at <a href="https://www.iacs.res.in/" class="publication-link" target="_blank">IACS</a>, Kolkata. I am currently working on my Master’s research under the guidance of <a href="https://scholar.google.com/citations?user=IfVWgecAAAAJ&hl=en" class="publication-link" target="_blank">Dr. Rajarshi Ray</a>. I have also had the opportunity to work with <a href="https://iacs.res.in/athusers/index.php?navid=0&userid=IACS0043" class="publication-link" target="_blank">Dr. Partha Basuchowdhuri</a> at IACS.</p>
+          
+          <h4 class="section-subtitle">Research Focus:</h4>
+          <p>My work centers on <strong>Explainable AI (XAI)</strong> within hybrid systems. As AI systems take on more responsibility in automating complex tasks across fields like healthcare, self-driving cars, and aircraft, ensuring their safety, reliability, and interpretability becomes essential. My research aims to develop methods that guarantee these properties before the deployment of such systems. I use techniques from <span class="highlight">formal methods</span>, <span class="highlight">automated planning</span>, <span class="highlight">satisfiability solving</span>, and <span class="highlight">logic</span> to address these challenges.</p>
+          
+          <h4 class="section-subtitle">Current Research:</h4>
+          <p>My research focuses on understanding the<strong> unsolvability of planning tasks in hybrid systems</strong>. These tasks are modeled as planning problems, and I use search-based approaches to explore potential solutions. The analysis involves techniques such as bounded reachability and constraint relaxation, aiming to uncover the core factors that lead to unsolvability. Recently, I have started exploring <strong>causal inference</strong> to trace sequences of critical events that contribute to task failures, offering valuable insights into the behavior of complex systems.</p>
+          
+          <h4 class="section-subtitle">Other Interests:</h4>
+          <p>Apart from my current research, I am also interested in <strong>multi-agent systems</strong>, where autonomous agents interact using principles from <span class="highlight">algorithmic game theory</span>. I am also keen on <strong>cyber-physical systems</strong>, which integrate computational and physical processes. My long-term goal is to bridge the gap between theoretical rigor and practical applications, contributing to the design of AI systems that are both cutting-edge and dependable.</p>
+          
+          <p>I’m always excited to connect with others who share a passion for these topics!</p>
+        </div>
+        <div class="profile-separator">- - - - - - - - - - - - - - - -</div>
+      </section>
+    </main>
+  </div>
+
+  <script src="js/scripts.js"></script>
+</body>
+</html>

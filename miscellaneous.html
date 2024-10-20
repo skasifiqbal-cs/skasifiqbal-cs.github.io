@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Miscellaneous - Sk Asif Iqbal</title>
+  <link rel="stylesheet" href="css/terminal.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .animated-text {
+      font-size: 1.1rem;
+      font-weight: bold;
+      color: #5A8D98;
+      text-align: center;
+      border-right: 2px solid #5A8D98;
+      white-space: nowrap;
+      overflow: hidden;
+      width: 0;
+      animation: typingEffect 6s steps(14) infinite;
+    }
+
+    @keyframes typingEffect {
+      0% {
+        width: 0;
+      }
+      40% {
+        width: 14ch; /* Full length of the text */
+      }
+      60% {
+        width: 14ch; /* Pause with the full text visible */
+      }
+      80% {
+        width: 4ch; 
+      }
+    }
+
+    @keyframes blink {
+      50% {
+        border-color: transparent;
+      }
+    }
+  </style>
+
+<script>
+  // Apply the saved theme from localStorage immediately to prevent flicker
+  (function() {
+    const savedTheme = localStorage.getItem('theme') || 'terminal-light';
+    // document.body.classList.add(savedTheme);
+    document.documentElement.className = savedTheme;
+  })();
+</script>
+</head>
+<body>
+  <div class="content-container">
+    <aside class="sidebar">
+      <div class="typing-name">
+        <span class="static-name"> > Sk Asif Iqbal</span>
+        <link rel="icon" type="image/png" href="images/favicon.png">
+
+      </div>
+      <!-- <img src="images/profile.jpg" alt="Profile Picture" class="profile-picture"> -->
+      <nav>
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">' About</a></li>
+          <li><a href="publications.html" class="nav-link"># Publications</a></li>
+          <li><a href="news.html" class="nav-link">! News</a></li>
+          <li><a href="miscellaneous.html" class="nav-link">&infintie; Miscellaneous</a></li>
+          <li><a href="cv.pdf" class="nav-link" target="_blank">* CV</a></li>
+
+        </ul>
+      </nav>
+      <div class="social-section">
+        <div class="terminal-alert">
+          <p class="connect-title">[ Connect ]</p>
+          <ul class="social-links">
+            <li><a href="mailto:skasifiqbbal31@gmail.com" class="social-link">skasifiqbbal31@gmail.com</a></li>
+              <li><a href="https://github.com/skasifiqbal-cs" class="social-link" target="_blank">GitHub</a></li>
+              <li><a href="https://www.linkedin.com/in/sk-asif-i-10a913118/" class="social-link" target="_blank">LinkedIn</a></li>
+              <li><a href="https://x.com/SkAsifIqbal19" class="social-link" target="_blank">Twitter</a></li>
+              <!-- <li><a href="https://scholar.google.com/citations?user=yourid" class="social-link">Google Scholar</a></li> -->
+          </ul>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <div class="toggle-container">
+        <button id="theme-toggle-button" class="theme-toggle">(o) Dark Mode</button>
+      </div>
+      <section id="miscellaneous" class="terminal-window">
+        <h3 class="section-title">[ Miscellaneous ]</h3>
+        <div class="simple-content">
+          <p class="animated-text">Coming Soon...</p>
+        </div>
+        <div class="profile-separator">- - - - - - - - - - - - - - - -</div>
+      </section>
+    </main>
+  </div>
+
+  <script src="js/scripts.js"></script>
+</body>
+</html>

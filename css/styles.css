@@ -1,0 +1,429 @@
+/* General Body Styles */
+body {
+  font-family: 'Courier New', Courier, monospace;
+  background-color: #f4f7fa; /* Softer light grey */
+  background: linear-gradient(135deg, #f4f7fa, #e8ebf2);
+  color: #4a4a4a; /* Dark slate text */
+  transition: background-color 0.3s, color 0.3s;
+  font-size: 1.05rem;
+  font-weight: 500;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.content-container {
+  display: flex;
+  height: 100vh; /* Makes the content extend the full height of the viewport */
+  max-width: 1000px; /* Limits the width of the content */
+  margin: 0 auto; /* Centers the content horizontally */
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.sidebar {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 0 0 230px; /* Sidebar width */
+  background: #e8ebf2;
+  background-image: radial-gradient(#d1d9e0 0.5px, transparent 0.5px);
+  background-size: 10px 10px;
+  padding: 20px;
+  border-right: 1px solid #b0b8c1;
+  box-shadow: 3px 0 6px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+}
+
+.main-content {
+  flex: 1;
+  padding: 24px;
+  overflow-y: auto; /* Ensures scrolling if content is longer than the viewport */
+  background: #ffffff;
+  color: #4a4a4a;
+  /* border-radius: none; */
+}
+
+/* Sidebar Styling */
+.sidebar {
+  display: flex;
+  flex-direction: column; /* Arranges children in a column */
+  justify-content: space-between; /* Pushes the last item to the bottom */
+  flex: 0 0 230px; /* Sidebar width */
+  overflow-y: auto;
+  background: #e8ebf2;
+  background-image: radial-gradient(#d1d9e0 0.5px, transparent 0.5px);
+  background-size: 10px 10px; /* Subtle dot grid */
+  padding: 20px;
+  border-right: 1px solid #b0b8c1;
+  box-shadow: 3px 0 6px rgba(0, 0, 0, 0.05);
+}
+
+.profile-picture {
+  width: 100%;
+  border-radius: 2px;
+  margin-bottom: 10px;
+  background: #f0f4f8;
+  padding: 5px;
+  border: 0.5px solid #ddd;
+  box-shadow: 0 0 8px rgba(90, 141, 152, 0.5);
+}
+
+.profile-separator {
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+  color: #888;
+  background: none;
+  margin: 10px 0;
+  padding: 2px 0;
+  font-size: 0.85rem;
+}
+
+.nav-list {
+  margin-top: 10px; /* Start a bit lower after the separator */
+  margin-bottom: 20px; /* Space below the navigation */
+}
+
+.nav-list li {
+  margin: 10px 0;
+  padding-left: 10px;
+  border-left: 2px solid #5A8D98;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #5A8D98;
+  transition: color 0.2s;
+  padding-left: 5px;
+  font-weight: bold;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+  color: #476e7e;
+  box-shadow: 0 0 8px rgba(90, 141, 152, 0.5);
+}
+
+.main-content {
+  /* display: flex; */
+  flex: 1;
+  padding: 24px;
+  overflow-y: auto;
+  background: #ffffff;
+  border-radius: 8px;
+}
+
+@keyframes flicker-effect {
+  0% { opacity: 1; }
+  50% { opacity: 0.95; }
+  100% { opacity: 1; }
+}
+
+.flicker {
+  animation: flicker-effect 2s infinite alternate;
+}
+
+.ascii-art {
+  width: 100%;
+  text-align: left; /* Align left for a more natural reading flow */
+  color: #4a7a8a; /* A balanced blue-gray tone */
+  background: #e8ebf2; /* Subtle light background */
+  padding: none;
+  border-radius: 5px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.95rem;
+  margin-bottom: 24px;
+  line-height: 1.6;
+  /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
+}
+
+.ascii-art:hover {
+  color: #89a7af;
+  transition: color 0.5s;
+}
+
+
+.section-title {
+  font-family: 'Courier New', Courier, monospace;
+  color: #5A8D98;
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+.simple-content {
+  background: #ffffff;
+  padding: 15px;
+  border-radius: none;
+  margin-bottom: 20px;
+  color: #4a4a4a;
+}
+
+.toggle-container {
+  text-align: right; /* Aligns the button to the right */
+  margin-bottom: 24px; /* Adds space below the button to separate it from the content */
+}
+
+.theme-toggle {
+  background: #5A8D98;
+  color: #ffffff;
+  padding: 3px 6px; /* Smaller padding for a less prominent look */
+  border: 1px solid #476e7e; /* Thinner border for subtlety */
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s, border 0.1s;
+  font-size: 0.85rem; /* Smaller font for a lighter appearance */
+}
+
+
+.theme-toggle:hover {
+  background: #476e7e; /* Darker background on hover */
+  border: 1px solid #5A8D98; /* Subtle border change on hover */
+}
+
+/* Dark Theme Styles */
+body.terminal-dark {
+  background: linear-gradient(135deg, #1e2127, #252932);
+  color: #cfd8dc;
+}
+
+body.terminal-dark .section-title {
+  color: #89a7af;
+}
+
+body.terminal-dark .nav-link {
+  color: #89a7af;
+}
+
+body.terminal-dark .nav-link:hover {
+  color: #5A8D98;
+}
+
+body.terminal-dark .main-content,
+body.terminal-dark .terminal-window,
+body.terminal-dark .simple-content {
+  background: #2b303a;
+  color: #dcdcdc;
+}
+
+.typing-effect::after {
+  content: '|';
+  animation: blink-cursor 1s step-end infinite;
+  margin-left: 2px;
+}
+
+@keyframes blink-cursor {
+  from, to { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* Light Theme Highlight */
+body.terminal-light .highlight {
+  background: #ffe0b2; /* Soft peach for light theme */
+  color: #4a4a4a; /* Darker text color for readability */
+  padding: 2px 4px;
+  font-family: 'Courier New', Courier, monospace;
+  border-radius: 2px;
+}
+
+/* Dark Theme Highlight */
+body.terminal-dark .highlight {
+  background: #87b8b3; /* Muted teal for dark theme */
+  color: #1e1e1e; /* Dark text color for good contrast */
+  padding: 2px 4px;
+  font-family: 'Courier New', Courier, monospace;
+  border-radius: 2px;
+}
+
+
+.typing-name {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.20rem; /* Larger font size for prominence */
+  font-weight: bold; /* Make the text bold */
+  color: #2e3a47; /* Darker color to stand out more */
+  margin-bottom: 18px; /* Adds more space below the name before the profile picture */
+  padding: 4px 0; /* Adds a little padding for better spacing */
+  text-align: left; /* Centers the text */
+  white-space: nowrap; /* Prevents the text from wrapping */
+}
+
+.static-name {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.20rem; /* Larger font size for prominence */
+  font-weight: bold; /* Make the text bold */
+  color: #2e3a47; /* Darker color to stand out more */
+  margin-bottom: 18px; /* Adds more space below the name before the profile picture */
+  padding: 4px 0; /* Adds a little padding for better spacing */
+  text-align: left; /* Centers the text */
+  white-space: nowrap; /* Prevents the text from wrapping */
+}
+
+.cursor {
+  display: inline-block;
+  width: 1ch;
+  background-color: #2e3a47; /* Match the darker color of the name */
+  animation: blink 1s steps(1) infinite;
+}
+
+
+@keyframes blink {
+  50% {
+    background-color: transparent;
+  }
+}
+
+/* Styling for the Connect Section */
+/* Social Links Section */
+.social-section {
+  margin-top: auto; /* Pushes the social section to the bottom of the sidebar */
+}
+
+.social-nav {
+  margin-top: auto; /* Pushes the social nav to the bottom */
+}
+
+.separator {
+  border-top: 1px dashed ;
+  margin: 10px 0;
+}
+
+.social-list {
+  list-style: none; /* Removes default bullet points */
+  padding: 0;
+  margin: 0;
+  text-align: center; /* Center-aligns the list */
+}
+
+.social-list li {
+  margin: 5px 0; /* Space between each social link */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-list li span {
+  margin-right: 5px; /* Space between the dash and the link text */
+  color: #5A8D98; /* Matching color */
+}
+
+.social-link {
+  text-decoration: none;
+  color: #5A8D98;
+  font-weight: normal;
+  transition: color 0.2s;
+}
+
+.social-link:hover {
+  text-decoration: underline;
+  color: #476e7e;
+}
+
+.terminal-alert {
+  background: #f0f4f8;
+  border: 1px solid #b0b8c1;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  margin-bottom: 10px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.connect-title {
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+  color: #5A8D98;
+  font-weight: bold;
+  text-align: center;
+  background: none;
+  padding: 2px;
+  border-radius: 3px;
+  display: inline-block;
+}
+
+.social-links {
+  list-style-type: none; 
+  padding: 0;
+  margin: 0;
+}
+
+.social-links > li {
+  list-style-type: none !important; 
+  list-style: none !important;
+  margin: 5px 0; /* Space between each social link */
+  font-size: 0.85rem;
+  font-family: 'Courier New', Courier, monospace;
+  text-align: left;
+}
+
+.social-link {
+  list-style-type: none !important; 
+  list-style: none !important;
+  text-decoration: none;
+  color: #5A8D98;
+  padding-left: 5px;
+  transition: color 0.2s, text-shadow 0.2s;
+  text-align: left;
+}
+
+.social-link:hover {
+  color: #476e7e;
+  /* text-shadow: 0 0 5px rgba(90, 141, 152, 0.5); */
+  text-decoration: underline;
+}
+
+.publications-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.publications-list li {
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.publication-link {
+  color: #5A8D98; /* Matching color with the theme */
+  text-decoration: none;
+  margin-right: 8px; /* Adds space between each link */
+}
+
+.publication-link:hover {
+  text-decoration: underline;
+  color: #476e7e; /* Darker shade on hover */
+}
+
+.publications-list li strong {
+  display: block;
+  margin-bottom: 5px; /* Space between the title and the description */
+}
+
+@media (max-width: 768px) {
+  .content-container {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .sidebar {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px;
+  }
+
+  .profile-picture {
+    width: 50px;
+    height: auto;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
